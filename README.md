@@ -1,124 +1,111 @@
-# 🧮 Inferential Statistics Main Project
+# 📊 Inferential Statistics Main Project  
+End-to-End Statistical Analysis using Probability, Z-scores, Hypothesis Testing & ANOVA
 
-## 📘 Project Overview
-This project focuses on applying **Inferential Statistics** to solve business-driven analytical problems using Python.  
-It demonstrates hypothesis testing, ANOVA, and probability-based decision-making through three case studies involving different industries.  
-Each analysis aims to support data-driven decision-making by drawing conclusions from sample data and quantifying uncertainty.
-
-The entire analysis was coded in **Python (Jupyter Notebook)**, supported by a **formal report** for statistical interpretation and business insights.
+This project demonstrates core inferential statistics concepts using four real-world scenarios.  
+It includes probability analysis, normal distribution applications, two-sample hypothesis testing, and two-way ANOVA with interaction effects.
 
 ---
 
-## 🎯 Project Objectives
-- Apply the concepts of **Inferential Statistics** to practical business scenarios.  
-- Perform **Hypothesis Testing** using various test statistics (t-test, ANOVA).  
-- Evaluate **sample evidence** to make decisions about population parameters.  
-- Quantify statistical significance and interpret results for business actions.  
-- Strengthen understanding of probability, sampling, and distribution theory.  
+## 🚀 Project Overview
+
+This repository contains:
+
+- **Jupyter Notebook:** Inferential_Statistics_Main_Project.ipynb  
+- **PDF Report:** Inferential_Statistics_project_report.pdf  
+
+The project is divided into **four structured inferential statistics problems**, each representing a practical business or scientific scenario.
 
 ---
 
-## 🧩 Case Studies and Datasets
+# 🧩 **1. Problem Statements & Solutions**
 
-### 1. 🪨 **Stone Suitability for Printing**
+## 🔶 **Problem 1 — Probability Using Contingency Tables**
+
 **Objective:**  
-Determine whether the two types of stones differ significantly in surface smoothness and suitability for printing.  
+Analyze customer behavior using a 2×2 contingency table based on:
+- Age Group (Young, Middle, Old)
+- Purchase Decision (Yes/No)
 
-**Approach:**  
-- Conducted exploratory data analysis to compare surface textures.  
-- Applied **Independent Two-Sample t-test** to test for mean differences between the two stone types.  
-- Set up hypotheses:  
-  - H₀: There is no significant difference between the two stone types.  
-  - H₁: There is a significant difference in suitability for printing.  
+**Key Work Done:**
+- Constructed contingency table
+- Calculated:
+  - Marginal probabilities
+  - Joint probabilities
+  - Conditional probabilities  
+- Verified probability rules
 
-**Inference:**  
-- Based on the p-value, rejected the null hypothesis.  
-- Concluded that **stone type significantly influences print quality**.  
-
----
-
-### 2. 💪 **Fitness Program Effectiveness**
-**Objective:**  
-Evaluate whether a structured fitness program significantly improved the health metrics of participants.  
-
-**Approach:**  
-- Measured health parameters before and after the program.  
-- Applied a **Paired t-test** to test the difference in mean outcomes.  
-- Verified assumptions of normality using histograms and QQ plots.  
-
-**Inference:**  
-- Found a statistically significant improvement (p < 0.05).  
-- Concluded that the **fitness program effectively enhanced participants’ performance and health outcomes**.  
+**Outcome:**  
+Clear understanding of how customer demographics influence purchase patterns.
 
 ---
 
-### 3. 🦷 **Dental Implant Hardness Study**
-**Objective:**  
-Examine whether **different dentists** and **implant methods** influence metal implant hardness.  
+## 🔶 **Problem 2 — Normal Distribution & Z-Scores**
 
-**Approach:**  
-- Created a factorial experimental design using two factors: Dentist and Implant Method.  
-- Applied **Two-Way ANOVA** to test for main and interaction effects.  
-- Hypotheses:  
-  - H₀₁: No difference among dentists.  
-  - H₀₂: No difference among implant methods.  
-  - H₀₃: No interaction between dentist and method.  
+**Scenario:**  
+A logistics company tracks delivery times (μ = 88 mins, σ = 15 mins).
 
-**Inference:**  
-- Rejected all null hypotheses.  
-- Concluded that **both dentist and method significantly affect hardness**, and there is a notable **interaction effect** between the two factors.  
+**Key Analysis:**
+- Converted delivery times to **Z-scores**
+- Calculated probability ranges using the standard normal distribution:
+  - P(X < 75)
+  - P(75 < X < 90)
+  - P(X > 120)
+- Plotted the normal curve with cutoff zones
 
----
-
-## 🧠 Statistical Concepts and Methods
-The analysis covered the following core inferential techniques:
-
-| Concept | Description |
-|----------|--------------|
-| Sampling and Estimation | Drawing conclusions about populations using sample statistics |
-| Central Limit Theorem | Understanding sampling distributions and variability |
-| Confidence Intervals | Estimating population parameters within uncertainty bounds |
-| Hypothesis Testing | Formulating and testing statistical claims |
-| t-tests | Comparing means across one or two samples |
-| ANOVA | Testing mean differences across multiple groups |
-| p-value Interpretation | Quantifying statistical significance |
-| Type I & II Errors | Evaluating risks of incorrect decisions |
+**Outcome:**  
+Helped quantify delivery performance and identify delays using probability.
 
 ---
 
-## 🧰 Tools and Libraries
-- **Python 3.10+**
-- **Jupyter Notebook**
-- **NumPy** → Mathematical and statistical operations  
-- **Pandas** → Data manipulation and cleaning  
-- **Matplotlib / Seaborn** → Visualization and data exploration  
-- **SciPy / statsmodels** → Statistical analysis (t-test, ANOVA)  
+## 🔶 **Problem 3 — Two-Sample Hypothesis Testing (t-Test)**
+
+**Scenario:**  
+Measure whether polishing stones increases hardness.
+
+**Process:**
+1. Loaded polished vs unpolished data  
+2. EDA: Boxplots, histograms  
+3. Normality check → Shapiro-Wilk  
+4. Variance check → Levene’s test  
+5. Two-sample **independent t-test**  
+6. Hypothesis:  
+   - H0: μ₁ = μ₂  
+   - H1: μ₁ ≠ μ₂  
+
+**Outcome:**  
+Statistically determined whether polishing significantly affects hardness.
 
 ---
 
-## 📈 Key Findings and Insights
-| Scenario | Statistical Test | Result | Business Insight |
-|-----------|------------------|---------|------------------|
-| Stone Suitability | Two-Sample t-test | Significant difference | Stone type affects printing quality |
-| Fitness Program | Paired t-test | Significant improvement | Program improves fitness outcomes |
-| Implant Hardness | Two-Way ANOVA | Main & interaction effects significant | Both dentist and method influence hardness |
+## 🔶 **Problem 4 — Two-Way ANOVA + Interaction Effects**
 
-**Overall Insight:**  
-Inferential statistics help businesses move from raw data to actionable decisions by quantifying uncertainty and validating assumptions.
+**Scenario:**  
+Analyze dental implant hardness based on:
+- Treatment Type (A/B)
+- Material Type (M1, M2, M3)
+
+**Steps Performed:**
+- Exploratory summary tables  
+- Interaction plots (Treatment × Material)  
+- Built ANOVA model using `statsmodels`  
+- Interpreted:
+  - Treatment effect  
+  - Material effect  
+  - Interaction effect  
+
+**Outcome:**  
+Identified which combinations of treatment & material lead to optimal hardness.
 
 ---
 
-## 📊 Visualizations
-Throughout the analysis, data visualizations were used to:
-- Explore sample distributions (histograms, boxplots)  
-- Check assumptions of normality and variance homogeneity  
-- Compare mean differences visually  
-- Display ANOVA factor effects and interactions  
+# 🛠️ **Technologies Used**
 
-Example plots:
-- Distribution plots for before/after fitness measurements  
-- Boxplots comparing hardness across dentists and methods  
-- Confidence interval visual summaries  
+- Python  
+- NumPy, Pandas  
+- SciPy (t-tests, normal distribution)  
+- Statsmodels (ANOVA)  
+- Matplotlib / Seaborn (visualizations)  
+- Jupyter Notebook  
 
 ---
 
